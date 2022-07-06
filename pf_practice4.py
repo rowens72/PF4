@@ -35,7 +35,15 @@ def num_within(a, b, c):
 # The function accepts the number n, the number of rows to print
 # Note : Pascal's triangle is an arithmetic and geometric figure first imagined by Blaise Pascal. 
 # Each number is the two numbers above it added together.
-#def pascal():
+# I had to look this up online as  I am not very good at the math.
+def pascal(n):
+   trow = [1]
+   y = [0]
+   for x in range(max(n,0)):
+      print(trow)
+      trow=[l+r for l,r in zip(trow+y, y+trow)]
+   return n>=1
+
 
 
 
@@ -55,3 +63,6 @@ print('rev_string : ', rev_string(''))
 print('num_within: ', num_within(3,2,4))
 print('num_within: ', num_within(3,1,3))
 print('num_within: ', num_within(10,2,5))
+
+# 5
+pascal(6) 
