@@ -3,8 +3,20 @@ def max_num(a, b, c):
     return max(a, b, c)
 
 # Write a Python function called mult_list() to multiply all the numbers in a list.
-#def  mult_list():
+def  mult_list(myList):
+    # make sure list has soemthing in it
+    if len(myList) == 0:
+        return 0
 
+    value = myList[0]
+    # loop through list and multiply numbers
+    if len(myList) > 1:
+        for x in myList[1:]:
+            value = value * x
+
+    return value
+            
+    
 # Write a Python function called rev_string() to reverse a string.
 #def rev_string(): 
 
@@ -22,4 +34,7 @@ def max_num(a, b, c):
 
 
 # call functions above
-print(max_num(1, 6, 3))
+print('max_num: ', max_num(1, 6, 3))
+
+print('mult_list: ', mult_list([1, 2, 3, 4]))
+print('mult_list: ', mult_list([]))
