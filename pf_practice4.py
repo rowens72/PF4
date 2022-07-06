@@ -13,12 +13,16 @@ def  mult_list(myList):
     if len(myList) > 1:
         for x in myList[1:]:
             value = value * x
-
     return value
             
     
 # Write a Python function called rev_string() to reverse a string.
-#def rev_string(): 
+def rev_string(myString): 
+    # will throw error with empty string "RecursionError: maximum recursion depth exceeded"
+    if myString == "":
+        return myString
+    else:
+        return rev_string(myString[1:]) + myString[:1]
 
 # Write a Python function called num_within() to check whether a number falls in a given range.
 # The function accepts the number, bseginning of range, and end of range (inclusive) as arguments.
@@ -34,7 +38,13 @@ def  mult_list(myList):
 
 
 # call functions above
+# 1
 print('max_num: ', max_num(1, 6, 3))
 
+# 2
 print('mult_list: ', mult_list([1, 2, 3, 4]))
 print('mult_list: ', mult_list([]))
+
+# 3
+print('rev_string : ', rev_string('Python function'))
+print('rev_string : ', rev_string(''))
