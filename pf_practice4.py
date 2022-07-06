@@ -27,7 +27,9 @@ def rev_string(myString):
 # Write a Python function called num_within() to check whether a number falls in a given range.
 # The function accepts the number, bseginning of range, and end of range (inclusive) as arguments.
 # Examples: num_within(3,2,4) returns True, num_within(3,1,3) returns True, num_within(10,2,5) returns False.
-#def num_within(): 
+def num_within(a, b, c):
+    return a in range(b, c + 1) 
+
 
 # Write a Python function called pascal() that prints out the first n rows of Pascal's triangle.
 # The function accepts the number n, the number of rows to print
@@ -48,3 +50,8 @@ print('mult_list: ', mult_list([]))
 # 3
 print('rev_string : ', rev_string('Python function'))
 print('rev_string : ', rev_string(''))
+
+# 4
+print('num_within: ', num_within(3,2,4))
+print('num_within: ', num_within(3,1,3))
+print('num_within: ', num_within(10,2,5))
